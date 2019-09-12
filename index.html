@@ -1,0 +1,239 @@
+<!Doctype html>
+<html>
+<head>
+  <title>Firbase web basic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="css/mdc.css" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-red.min.css" />
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+  <!--Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LOGIN DIALOG -->
+  <dialog id="loginDialog" class="mdl-dialog">
+    <h4 class="mdl-dialog__title">Sign In</h4>
+    <div class="mdl-dialog__content">
+      <p id="loginError"></p>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="loginEmail">
+        <label class="mdl-textfield__label" for="sample3">Email...</label>
+      </div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="loginPassword">
+        <label class="mdl-textfield__label" for="sample3">Password...</label>
+      </div>
+    </div>
+    <div class="mdl-dialog__actions">
+      <!-- Colored raised button -->
+      <button id="loginBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+        Sign In
+      </button>
+      <!-- MDL Spinner Component -->
+      <div id="loginProgress" class="mdl-spinner mdl-js-spinner is-active"></div>
+    </div>
+  </dialog>
+
+  <!-- MAIN PAGE CONTENT -->
+
+  <div class="login-cover">
+    <!-- MDL Spinner Component -->
+    <div class="page-loader mdl-spinner mdl-js-spinner is-active">
+    </div>
+  </div>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs"> <header class="mdl-layout__header"> 
+<div class="mdl-layout__header-row"> 
+<!-- Title -->
+
+<span class="mdl-layout__title">
+           HMP3
+          <span class="page-title-span"> | </span>
+          <span class="page-title-span"> <button id="signOutBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+  <div class="mdl-layout-spacer"> </div> Sign Out
+ <i class="button-right-icon material-icons">account_circle</i></button> </span> </span>
+
+        
+ </div>
+ <div class="mdl-layout__tab-bar mdl-js-ripple-effect"> <a href="#fixed-tab-1" class="mdl-line mdl-layout__tab is-active"><i class="mdl-line material-icons">
+record_voice_over
+</i> Timeline </a>
+<a href="#fixed-tab-2" class="mdl-line mdl-layout__tab"> <i class="mdl-line material-icons">
+view_agenda
+</i> Contact </a> 
+<a href="#fixed-tab-3" class="mdl-line mdl-layout__tab"> <i class="mdl-line material-icons">
+donut_small
+</i> Update </a> </div>
+
+</header>
+
+
+<div class="mdl-layout__drawer"> 
+<aside class="mdc-drawer">
+<div class="mdc-drawer__content"> 
+
+<nav class="mdc-list">
+<div class="mdc-drawer__header"> <h3 class="mdc-drawer__title ">Alam Santiko Wibowo</h3> <h6 class="mdc-drawer__subtitle">Frontkithelp@gmail.com</h6> </div>
+<hr/>
+<a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page">
+ <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i> <span class="mdc-list-item__text">Notification</span> 
+</a>
+<a class="mdc-list-item" href="#"> <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i> 
+
+<span class="mdc-list-item__text">Feedback</span> </a>
+
+ </nav>
+ </div> 
+</aside>
+        
+              
+</div>
+
+<main class="mdl-layout__content">
+<center>
+<section class="mdl-layout__tab-panel is-active" id="fixed-tab-1"> 
+<div class="page-content">
+<!-- Wide card with share menu button --> 
+<style> 
+
+.demo-card-wide.mdl-card { 
+max-width: 512px; 
+margin-top: 15px;
+margin-bottom: 15px;
+
+}
+
+.demo-card-wide > .mdl-card__title {
+ color: #fff;
+ height: 176px;
+ background: url('vd.jpg') center / cover; 
+}
+
+ .demo-card-wide > .mdl-card__menu { 
+color: #fff;
+
+ } 
+
+.mdl-card__supporting-text { 
+text-align: left;
+
+ } 
+
+.mdl-card__title {
+font-family : comic sans;
+text-transform: uppercase;
+
+}
+
+</style>
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+ <div class="mdl-card__title">
+ <h2 class="mdl-card__title-text"><i class="material-icons">
+record_voice_over
+</i> Audio Lesson #1</h2>
+ </div> 
+
+<div class="mdl-card__supporting-text"> Terapi Bagaimana Merubah Logat Bahasa Inggris Layaknya Orang Asing Berbicara Dalam 10 Menit.</div> 
+
+<div class="mdl-card__actions mdl-card--border"> <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"> <i class="material-icons">
+play_circle_outline
+</i> Get Started </a> </div> 
+
+<div class="mdl-card__menu"> 
+<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">
+screen_share
+</i></button> 
+</div>
+</div>
+
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+ <div class="mdl-card__title">
+ <h2 class="mdl-card__title-text"><i class="material-icons">
+record_voice_over
+</i> Audio Lesson #2</h2>
+ </div> 
+
+<div class="mdl-card__supporting-text"> Terapi Bagaimana Melatih Vokal Bahasa Inggris Dengan Cepat dan Percaya Diri.</div> 
+
+<div class="mdl-card__actions mdl-card--border"> <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"> <i class="material-icons">
+play_circle_outline
+</i> Get Started </a> </div> 
+
+<div class="mdl-card__menu"> 
+<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"><i class="material-icons">
+screen_share
+</i></button> </div>
+</div>
+
+</div>
+
+
+ </section>
+
+<section class="mdl-layout__tab-panel" id="fixed-tab-2"> <div class="page-content">
+<div class="container">  
+  <form id="contact" action="" method="post">
+    <h3>Quick Contact</h3>
+    <h4>Contact us today, and get reply with in 24 hours!</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Web Site starts with http://" type="url" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+ 
+  
+</div>
+</div> 
+</section> 
+
+<section class="mdl-layout__tab-panel" id="fixed-tab-3"> <div class="page-content">
+
+<div id="update-item">
+
+</div>
+
+
+</div>
+</section>
+</center>
+
+</main> 
+</div>
+
+ <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBL_l6NP7sXHjWkEruZ6CbA5LVV22dD_uo",
+      authDomain: "e-duta.firebaseapp.com",
+      databaseURL: "https://e-duta.firebaseio.com",
+      storageBucket: "e-duta.appspot.com",
+      messagingSenderId: "1083263519022"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="js/index.js"></script>
+
+  </body>
+</html>
